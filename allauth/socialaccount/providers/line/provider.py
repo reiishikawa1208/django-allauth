@@ -24,10 +24,7 @@ class LineProvider(OAuth2Provider):
 
     def extract_common_fields(self, data):
         return dict(email=data.get('email'),
-                    username=data.get('displayName'),
-                    first_name=data.get('first_name'),
-                    last_name=data.get('last_name'),
-                    name=data.get('name'))
+                    first_name=data.get('displayName'))
 
 
 provider_classes = [LineProvider]
